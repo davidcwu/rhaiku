@@ -1,4 +1,5 @@
 Rhaiku::Application.routes.draw do
+  root :to => 'generators#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
