@@ -10,4 +10,8 @@ class Word < ActiveRecord::Base
                           :greater_than => 0,
                           :less_than => 8
                         }
+
+  def to_verbose_s
+    "#{word} #{syllables}"
+  end
 end
