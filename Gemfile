@@ -14,7 +14,7 @@ end
 group :test do
   gem 'rspec'
   gem 'webrat'
-  gem 'factory_girl'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Gems used only for assets and not required
