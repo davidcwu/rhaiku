@@ -1,13 +1,13 @@
 class PagesController < ApplicationController
   def home
-    @title = 'Rhaiku | Home'
+    @title = 'Home'
   end
 
   def contact
-    @title = 'Rhaiku | Contact'
+    @title = 'Contact'
   end
 
   def about
-    @title = 'Rhaiku | About'
+    @title = 'About'
   end
 end
