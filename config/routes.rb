@@ -1,5 +1,6 @@
 Rhaiku::Application.routes.draw do
-  get "words/index"
+  resources :words
+
 
   get "pages/home"
   get "pages/contact"

@@ -4,9 +4,19 @@ describe WordsController do
   render_views
 
   describe "GET 'index'" do
-    it 'should succeed' do
-      get 'index'
-      response.should be_success
+
+    describe 'sanity check' do
+
+      before(:each) do
+        get 'index'
+      end
+
+      subject { response }
+
+      it { should be_success }
+      it { should have_selector('h1', :content => "Words") }
+      it { should have_selector('a', :href => new_word_path) }
+
     end
 
     describe 'with existing words' do 

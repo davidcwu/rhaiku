@@ -1,3 +1,6 @@
+<h1>Words</h1>
 <% @words.each do |word| %>
   <li><%= word.to_verbose_s %></li>
 <% end %>
+
+<%= link_to('New Word', new_word_path) %>
