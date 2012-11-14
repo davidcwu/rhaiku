@@ -4,5 +4,6 @@ class WordsController < ApplicationController
   end
 
   def new
+    @word = Word.new
   end
 end

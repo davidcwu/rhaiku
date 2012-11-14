@@ -30,4 +30,17 @@ describe WordsController do
       end
     end
   end
+
+  describe "GET 'new'" do
+    describe 'sanity check' do
+
+      before(:each) do
+        get 'new'
+      end
+
+      subject { response }
+
+      it { should be_success }
+    end
+  end
 end
