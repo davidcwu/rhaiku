@@ -1,0 +1,8 @@
+<% if @word.errors.any? %>
+	<p>There were problems with the following fields:</p>
+	<ul>
+	<% @word.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+	</ul>
+<% end %>

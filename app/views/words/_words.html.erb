@@ -1,0 +1,10 @@
+<%= form_for(@word) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.label :word %>
+  <%= f.text_field :word %>
+
+  <%= f.label :syllables %>
+  <%= f.number_field :syllables %>
+
+  <%= f.submit 'Save' %>
+<% end %>
