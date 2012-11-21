@@ -17,4 +17,18 @@ class WordsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @word = Word.find_by_id(params[:id])
+    @title = 'Edit Word'
+  end
+
+  # def update
+  #   if @word.update_attributes(params[:word])
+  #     flash[:success] = "Successfully updated #{@word}"
+  #     redirect_to @word
+  #   else
+  #     render 'edit'
+  #   end
+  # end
 end

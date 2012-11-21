@@ -78,6 +78,21 @@ describe WordsController do
         response.should redirect_to(words_path)
       end
     end
+    
+  end
 
+  describe "GET 'edit'" do
+    before(:each) do
+      @word = FactoryGirl.create(:word)
+      get :edit, :id => @word.id
+    end
+
+    it 'should have the right title' do 
+      response.should have_selector('title', :content => 'Edit Word')
+    end
+
+    it 'should have the right word displayed' do
+      assigns[:word].should == @word
+    end
   end
 end
