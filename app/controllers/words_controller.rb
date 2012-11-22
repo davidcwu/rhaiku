@@ -23,12 +23,18 @@ class WordsController < ApplicationController
     @title = 'Edit Word'
   end
 
-  # def update
-  #   if @word.update_attributes(params[:word])
-  #     flash[:success] = "Successfully updated #{@word}"
-  #     redirect_to @word
-  #   else
-  #     render 'edit'
-  #   end
-  # end
+  def update
+    @word = Word.find_by_id(params[:id])
+    if @word.update_attributes(params[:word])
+      flash[:success] = "Successfully updated #{@word}"
+      redirect_to @word
+    else
+      render :edit
+    end
+  end
+
+  def show
+    @word = Word.find_by_id(params[:id])
+  end
+
 end
